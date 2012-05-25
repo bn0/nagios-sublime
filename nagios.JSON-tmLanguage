@@ -7,17 +7,17 @@
       "comment": "# comments"
     },
     { "include": "#variable" },
-    { "name": "variable.complex.nagios",
+    { "name": "entity.section.nagios",
       "begin": "^[\\s]*(define)[\\s]+([A-Za-z0-9_]+)[\\s]*(\\{)",
       "beginCaptures": {
         "1": { "name": "keyword.nagios" },
-        "2": { "name": "constant.numeric.nagios" }
+        "2": { "name": "constant.language.nagios" }
       },
       "patterns": [
         { "include": "$self" },
         { "include": "#variable" },
         { "include": "#separator" },
-        { "name": "string.nagios",
+        { "name": "constant.language.nagios",
           "match": "^[\\s]*[A-Za-z0-9_]+[\\s]"
         },
         { "name": "comment.line.semi-colon.nagios",
@@ -30,7 +30,7 @@
     { "name": "string.quoted.double.nagios",
       "begin": "\"",
       "beginCaptures": {
-        "0": { "name": "definition.string.quoted.double.nagios" }
+        "0": { "name": "string.quoted.double.nagios" }
       },
       "patterns": [
         { "include": "#variable" },
@@ -41,15 +41,12 @@
   ],
   "repository": {
     "variable": {
-      "name": "keyword.nagios",
+      "name": "constant.other.nagios",
       "match": "\\$([A-Za-z][A-Za-z0-9_]+)\\$",
-      "captures": {
-        "1": { "name": "constant.numeric.nagios" }
-      },
       "comment": "Variables like $SERVICESTATE$, $USER1$ etc"
     },
     "separator": {
-      "name": "keyword.nagios",
+      "name": "constant.character.nagios",
       "match": "!",
       "comment": "check_command separators"
     }
