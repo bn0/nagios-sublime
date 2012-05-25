@@ -51,7 +51,7 @@
 		"separator": {
   	  		"name": "keyword.nagios",
   	  	   	"match": "!",
-  	  	   	"comment": "Separators like !USEDDISKSPACE, !SERVICESTATE etc"
+  	  	   	"comment": "check_command separators"
 	  	  	
 		}
 	},
