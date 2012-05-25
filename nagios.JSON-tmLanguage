@@ -1,0 +1,59 @@
+{ "name": "Nagios",
+	"scopeName": "source.nagios",
+	"fileTypes": ["cfg"],
+	"patterns": [
+  		{	"name": "comment.source.nagios",
+	  		"match": "^[\\s]*#.*",
+	  		"comment": "# comments"
+  		},
+  		{ "include": "#variable" },
+	  	{	"name": "variable.complex.nagios",
+		  	"begin": "^[\\s]*(define)[\\s]+([A-Za-z0-9_]+)[\\s]*(\\{)",
+		  	"beginCaptures": {
+		  	    "1": { "name": "keyword.nagios" },
+		  	    "2": { "name": "constant.numeric.nagios" }
+	  	  	},
+	  	  	"patterns": [
+		  	  	{	"include": "$self" },
+		  	  	{ "include": "#variable" },
+		  	  	{ "include": "#separator" },
+		  	  	{	"name": "string.nagios",
+		  	  		"match": "^[\\s]*[A-Za-z0-9_]+[\\s]"
+		  	  	},
+		  	  	{	"name": "comment.source.nagios",
+		  	  		"match": ";.*",
+		  	  		"comment": "In-line comments"
+		  	  	}
+	  		],
+	  	  	"end": "\\}"
+	  	},
+		{	"name": "string.quoted.double.nagios",
+			"begin": "\"",
+			"beginCaptures": {
+		    	"0": { "name": "definition.string.quoted.double.nagios" }
+		  	},
+		  	"patterns": [
+		  		{ "include": "#variable" },
+		  		{ "include": "#separator" }
+		  	],
+		  	"end": "\""
+		}
+  	],
+	"repository": {
+		"variable": {
+			"name": "keyword.nagios",
+	  	   	"match": "\\$([A-Za-z][A-Za-z0-9_]+)\\$",
+	  	   	"captures": {
+	  	    	"1": { "name": "constant.numeric.nagios" }
+	  	   	},
+	  	   	"comment": "Variables like $SERVICESTATE$, $USER1$ etc"
+		},
+		"separator": {
+  	  		"name": "keyword.nagios",
+  	  	   	"match": "!",
+  	  	   	"comment": "Separators like !USEDDISKSPACE, !SERVICESTATE etc"
+	  	  	
+		}
+	},
+  	"uuid": "a8870a27-4f36-4aa7-8f7b-34a87060247d"
+}
