@@ -1,0 +1,15 @@
+<snippet>
+	<tabTrigger>host</tabTrigger>
+	<scope>source.nagios</scope>
+	<description>Nagios Host</description>
+
+	<content><![CDATA[
+host \{
+	use			${1:template}
+	host_name	${2:name}
+	alias		${3:alias}
+	address		${4:ip-address}
+\}
+${0}
+]]></content>
+</snippet>

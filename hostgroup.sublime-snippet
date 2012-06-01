@@ -1,0 +1,13 @@
+<snippet>
+	<tabTrigger>hostgroup</tabTrigger>
+	<scope>source.nagios</scope>
+	<description>Nagios Hostgroup</description>
+
+	<content><![CDATA[
+hostgroup \{
+	hostgroup_name	${1:hostgroup}
+	alias			${2:alias}
+\}
+${0}
+]]></content>
+</snippet>

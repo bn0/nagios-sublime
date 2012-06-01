@@ -1,0 +1,19 @@
+<snippet>
+	<tabTrigger>contact</tabTrigger>
+	<scope>source.nagios</scope>
+	<description>Nagios Contact Template</description>
+
+	<content><![CDATA[
+contact \{
+	name							${1:name}
+	service_notification_period		${2:24x7}
+	host_notification_period		${3:24x7}
+	service_notification_options	${4:w,u,c,r,f,s}
+	host_notification_options		${5:d,u,r,f,s}
+	service_notification_commands	${6:notify-service-by-email}
+	host_notification_commands		${7:notify-host-by-email}
+	register						0
+\}
+${0}
+]]></content>
+</snippet>

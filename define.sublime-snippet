@@ -1,0 +1,10 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<tabTrigger>define</tabTrigger>
+	<scope>source.nagios</scope>
+	<description>Nagios Object</description>
+
+	<content><![CDATA[
+define ${0:object}
+]]></content>
+</snippet>
