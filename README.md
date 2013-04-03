@@ -1,3 +1,10 @@
+nagios-sublime
+============  
+_Nagios package for Sublime Text 2_
+
+A small package that provides syntax highlighting, block commenting, and snippet support for
+defining hosts/services etc.
+
 INSTALLATION
 -------------
 <dl>
@@ -14,17 +21,15 @@ open a terminal, cd to the packages directory and then clone this project:
 All Package Control commands begin with *'Package Control:'*, so view the list of
 commands by typing *'package'*.
 
-<dl><dt>Add Repository</dt>
-
-<dd>Package Control: Add Repository  
+######Add Repository  
+Package Control: Add Repository  
 
 	https://github.com/bn0/nagios-sublime
-</dd>
 
-<dt>Install Package</dt>
-<dd>Package Control: Install Package  
+
+######Install Package  
+Package Control: Install Package  
 type *'nagios'* to shorten the list and select *'nagios-sublime'*.
-</dd>
 
 REMOVE
 ------
