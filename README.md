@@ -30,7 +30,7 @@ Package Control: Add Repository
 ######Install Package  
 Package Control: Install Package  
 type *'nagios'* to shorten the list and select *'nagios-sublime'*.
-
+</dd>
 REMOVE
 ------
 <dt>Manually:</dt>
