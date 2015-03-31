@@ -1,6 +1,6 @@
 nagios-sublime
 ============  
-_Nagios package for Sublime Text 2_
+_Nagios package for Sublime Text_
 
 A small package that provides syntax highlighting, block commenting, and snippet support for
 defining hosts/services etc.
